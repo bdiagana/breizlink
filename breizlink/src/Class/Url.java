@@ -44,8 +44,8 @@ public class Url {
 		                .filteredBy(CharacterPredicates.LETTERS, CharacterPredicates.DIGITS)
 		                .build();
 		String generate= randomStringGenerator.generate(5);
-		String urlRaccourci="http://localhost:8080/url/"+generate; 
-			return urlRaccourci;
+		//String urlRaccourci="http://localhost:8080/breizlink/Controller?link="+generate; 
+			return generate;
 	}
 	
 	

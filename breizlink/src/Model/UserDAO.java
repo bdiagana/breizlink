@@ -13,7 +13,6 @@ public class UserDAO {
 	private static PreparedStatement pS;
 	
 	public void addUser(User user) throws SQLException, ClassNotFoundException {
-
 		Connection con= (Connection) DAO.connect();
 		 pS = con.prepareStatement("INSERT INTO user (id, login, email, password, statut, confirm)" + "values (default, ?, ?, ?,?,?)"); 
 		 pS.setString(1, user.getLogin());
@@ -33,6 +32,21 @@ public class UserDAO {
 		 pS.close(); 
 	}
 	
+	public boolean authentification(String login, String password) throws ClassNotFoundException, SQLException {
+		Connection con= (Connection) DAO.connect();
+		Statement stmt = con.createStatement();
+		ResultSet rs = stmt.executeQuery("SELECT confirm from user where login='"+login+"' and password='"+password+"' ");
+		while (rs.next()) {
+			  boolean compte = rs.getBoolean("confirm");
+			  return compte;
+			}
+		return false;
+	}
+	
+
+   
+
+
 
 
 

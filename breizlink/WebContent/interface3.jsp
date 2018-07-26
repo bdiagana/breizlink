@@ -30,15 +30,15 @@
 	<div class="container">
 	<div class="form-group">
 		<form action="?action=raccourcir" method="post">
-		<input type="text" name="urlSimple"  placeholder="Url à raccourcir"/>
+		<input type="text" name="urlSimple" class="form-control"  value="${sessionScope.urlS}"/>
 		<input value="Raccourcir" class="btn btn-success" type="submit">
 		</form>
-        <input type="checkbox" id="securise" name="securise" onclick="validate()" value="coche"/>
+        <input type="checkbox" id="securise"  name="securise" onclick="validate()" value="coche"/>
         <label for="coche">Sécurisée avec un mot de passe</label><br>
 		  <div id="passwd" style="display:none;">
  			<input type="password"  name="urlMdp" placeholder="mot de passe" />
  		 </div>
-        
+        <input type="text" class="form-control" name="urlR"  value="http://localhost:8080/breizlink/Controller?link=${sessionScope.url}"/>
         
         <br>
         <a> Créer un compte pour voir nos autres options possibles </a>

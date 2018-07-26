@@ -30,10 +30,19 @@
 		<div class="container">
 	<div class="form-group">
       <br>
-      <br>
-      	<button type="button" class="btn btn-primary"  name="infoperso">Informations Personnelles</button>
-		<button type="button" class="btn btn-primary"  name="mesurl">Mes URL</button>
 
+		<p>
+		Bonjour ${sessionScope.id},<br>
+		vous pouvez désormais accéder à toutes nos options de création d’URL raccourcies <br>
+		Avec mot de passe<br>
+		Avec mot de passe différents<br>
+		A durée limitée<br>
+		A durée périodique<br>
+		Création par lots<br>
+		Visualisation des statistiques
+		
+		</p>
+		<br>
         <br>
 		<a> Devenir partenaires -  CGV - Mentions légales </a>
     </div>
